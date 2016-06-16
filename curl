@@ -1,0 +1,50 @@
+POST REQUEST
+
+
+curl --include --request POST http://localhost:3000/albums \
+   --header "Content-Type: application/json" \
+   --data '{
+       "album": {
+            "title": "Americans",
+            "artist": "The Offspring"
+       }
+   }'
+
+
+PATCH REQUEST
+
+curl --include --request PATCH http://localhost:3000/albums/8 \
+   --header "Content-Type: application/json" \
+   --data '{
+       "album": {
+            "title": "Dookie",
+            "artist": "Green Day"
+       }
+   }'
+
+
+   DELETE REQUEST
+
+   curl --include --request DELETE http://localhost:3000/albums/8
+
+SONGS - POST REQUEST
+
+
+   curl --include --request POST http://localhost:3000/songs \
+      --header "Content-Type: application/json" \
+      --data '{
+          "song": {
+               "title": "Americans",
+               "length": 345,
+               "rating": 5
+          }
+      }'
+
+  SONGS -- PATCH
+  curl --include --request PATCH http://localhost:3000/songs/9 \
+     --header "Content-Type: application/json" \
+     --data '{
+         "song": {
+              "title": "Rawr"
+         }
+     }'
